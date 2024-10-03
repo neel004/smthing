@@ -1,0 +1,142 @@
+Playbook for the organization
+
+
+Table of Contents
+1. Alert Overview
+2. Investigation steps
+3. Escalation steps
+4. Communication Plan 
+5. Remediation Steps
+6. Documentation Standards
+7. Additional Information
+8. References 
+
+
+1. Alert Overview- 
+1.1) Alert Information / Search / Trigger Conditions - 
+
+
+Organization Home Page: 
+
+
+To go to the Alerts Page: IT > Alerts > Alerts
+
+
+2. Investigation Steps -
+2.1) Step-by-step guide for investigating the alert - In the IT > Alerts > Alerts. Page. 
+1. Select the time frame for the alerts on the left hand side of the page.
+2. Click on Filters.
+3. Select Shared with ME. 
+4. Select Open Alerts
+5. The alerts will be listed as below.
+6. To triage the alerts, click on the magnifying glass on the left side of the alert, it will open a side panel on the left for information regarding to the DLP alert.
+7. Scroll down the right pane and reach the DLP section. Clicking on the arrow next to the DLP ID would open another window with the alert details. Below is the incident page opened in a new tab window
+
+
+2.2) Case for false positive: 
+1. Verify the users’s email and domain to see if it is a vendor or employee.
+2. If the user is an employee, verify if the data being sent out is to trusted vendor or not.refer to domain and email whitelists to confirm if user is permitted to do so or not.
+3. Often in cases of the user being a contractor will upload excel sheets, source code and other files containing keywords like “submission“ or  “project“. If the file are being sent to trusted vendor domain or email ( verify using below provided vendor and user email whitelist), then it is safe to dismiss the alert.
+4. There are cases where a user will upload sensitive documents into Smartsheet or other similar tools and share it with colleagues, in this instance, as the data is still within the Organization environment, it is safe to dismiss. 
+5. There are users who have exceptions to share to cloud drives like Gdrive, OneDrive and Box to name a few, which can found in the users email exceptions list mentioned below.
+6. To dismiss an alert, click on the box on the left most part of the alert. the click on the Acknowledge button and select Acknowledge Selected.
+
+
+2.3) In the case of true positive:
+1. Triage the alert, by clicking on In progress (1), to set the incident to the in progress state.
+2. Then click on Select (2), to select the name of the analyst. DLP ID, DLP Incident False Positive Alert Triage
+3. Select the analyst by name (3) to assign it to yourselves or others
+4. The same incident can be accessed by visiting the Incidents page from the Homepage in Incidents > DLP
+5. In case the user sends data outside the Organization environment e.g.: Personal email, GitHub, G drive or other Cloud drives, make sure the user is allowed as per user email exception lis. If the data was sent to an unapproved destination, move to contain the user on first priority, inform in the Required channels and create an incident ticket to track the issue. 
+
+
+3. Escalation Procedures- 
+3.1) Escalation paths and points of contact - 
+After user containment, reach out to the [Privileged & Confidential] Chat Group.
+4. Communication Plan - 
+4.1) Message / Email Draft / POC for Communications 
+- POC(Point of Contact) - Mat.Murdock@murdock.ai
+- Message template: 
+```
+Hello Mat,
+We have found 10+ alerts in NetSkope in which the user -xyz@murdock.ai- has uploaded the source codes (python files) to a GitHub repository (abcd-xyz.s3.amazonaws.com/).
+ We did not find any exceptions for this user to upload in [Application Name e.g:GitHub]. The upload was done using his personal email id - xyx@gmail.com.
+This is suspicious behavior and so we have contained the user- xyz@murdock.ai  from Okta, Jamf, Crowdstrike and in Intune.
+Please find few links of 10+ incidents for the user:
+https://murdock.ai.goskope.com/ns#/incmgmt? timePeriod=custom_1620386822_1620434238&incidentId=05643246880648190703995&view=detail
+https://murdock.ai.goskope.com/ns#/incmgmt? timePeriod=custom_1620386870_1620434837&incidentId=054323495852948011&view=detail
+Can you please help with escalating this to legal immediately as it was uploaded using personal email.
+
+
+ Please let me know if any additional details are required.  
+```
+
+
+5. Remediation Steps -
+5.1) Actions to take to remediate the issue identified by the alert - 
+1. In case of a true positive case, contain the access of the user using the Containment Instructions .
+2. Create a ticket to track the incidents progress.
+3. Make sure to post the relevant details in [Privileged & Confidential] Chat Group.
+5.2) Collaboration with other teams or departments for resolution, POC from IT Team and Template - Please refer to this confluence page on Who to Contact. 
+
+
+6. Documentation Standards - 
+To track the status of the true positive tickets, create a incident ticket.
+1. Select the requestor name by the Murdock email ID ( Either Analyst / Other Requestor)
+2. Select netskope for the configuration column.
+3. Enter the User’s name by murdock email id.
+4. Change the state from Draft to Analysis.
+5. Select Analyst as Assigned Group.
+6. Select Assigned to Analyst.
+7. Type in a short description as a brief overview for the ticket.
+8. Click on the Update button to create the Ticket. 
+9. In the description, please give a full description of the incidents, such as attaching alert link, all relavant information related to this incident.
+10. Update and attach needed notes and screenshot as the investigation proceeds.
+
+
+
+
+7. Additional Information-
+Other than the traditional method to gather information about a particular incident, there are other features that NetSkope provides in terms of IRM resolution: Home > IT. 
+1. Applications & Application Events : The application page helps you manage apps, create policies, plus analyze and export app information. Applications page displays specified application events information.
+2. Private apps & Websites: Private App page helps you determine which private apps are are visited, how often, plus analyze and export site information. Website page helps you determine which websites users are visiting, how often, plus analyze and export site information
+3. Users: This page helps you manage your users, create policies, plus analyze, and export user information
+4. Page Events & Network events: The Network events page enables you to monitor private app traffic and view relevant details, like who has access to what, from where, and for how long. Page Events page help you to monitor events by page.
+
+
+8. References -
+1. For finding the owners of the various SOC tools, please refer to the Checklist of Tools playbook.
+2. NetSkope documentation can be found in this link: NetSkope Alerts Documentation
+
+
+9. Users exception list -
+The users mentioned here are allowed to share confidential informations with the outside domains.
+1. john@mudock.ai
+2. simmons@murdock.ai
+3. john@murdock.ai
+4. mat@murdock.ai
+
+
+10. Domain Exception list - 
+The exceptional users are only allowed to share the data to the below whitelisted domains among which some are of our clients and vendors. The transfer to any domain which isn’t listed here must be contaminated.
+* google.com
+* box.com
+* github.com
+* okta.com
+* api.accuweather.com
+* api.ipify.org
+* apis.google.com
+* app.plex.tv
+* appengine.google.com
+* bitbucket.org
+* bokser.org
+* books.google.com
+* boston.cbslocal.com
+* client.dropbox.com
+* cloudflare.com
+* cnbc.com
+* cnn.com
+* code.createjs.com
+* code.google.com
+* code.jquery.com
+* code.responsivevoice.org
