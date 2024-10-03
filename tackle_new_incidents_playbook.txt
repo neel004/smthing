@@ -62,9 +62,6 @@ Hello Mat,
 We have found 10+ alerts in NetSkope in which the user -xyz@murdock.ai- has uploaded the source codes (python files) to a GitHub repository (abcd-xyz.s3.amazonaws.com/).
  We did not find any exceptions for this user to upload in [Application Name e.g:GitHub]. The upload was done using his personal email id - xyx@gmail.com.
 This is suspicious behavior and so we have contained the user- xyz@murdock.ai  from Okta, Jamf, Crowdstrike and in Intune.
-Please find few links of 10+ incidents for the user:
-https://murdock.ai.goskope.com/ns#/incmgmt? timePeriod=custom_1620386822_1620434238&incidentId=05643246880648190703995&view=detail
-https://murdock.ai.goskope.com/ns#/incmgmt? timePeriod=custom_1620386870_1620434837&incidentId=054323495852948011&view=detail
 Can you please help with escalating this to legal immediately as it was uploaded using personal email.
 
 
