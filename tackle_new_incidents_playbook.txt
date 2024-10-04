@@ -137,3 +137,84 @@ The exceptional users are only allowed to share the data to the below whiteliste
 * code.google.com
 * code.jquery.com
 * code.responsivevoice.org
+
+
+
+
+
+
+
+
+
+
+Password Policy and Standards Standard Operating Procedure (SOP)
+
+
+1. Purpose
+The purpose of this policy is to safeguard the confidentiality, integrity and availability of information, systems and facilities by specifying acceptable usage of electronic messaging services within the Edelman environment by users/employees.
+2. Distribution List
+This standard guideline is accessible to all support resources in the Organization working for the project.
+3. Scope
+This policy is applicable to the following: 
+• Users accessing information, systems and/or facilities; 
+• Information collected, stored, processed or transmitted by or on behalf of,
+• Systems owned or operated by or on behalf of, and.
+• Facilities owned, leased, or operated by.
+4. Policy
+Passwords are an important aspect of computer security. They are the front line of protection for user accounts. A poorly chosen password may result in the compromise of corporate network. As such, users are responsible for taking the appropriate steps, as outlined below, to select and secure their passwords. 
+   1. Users shall be required to create passwords that are strong, comply with this policy, and are easy to remember.
+   2. Passwords must not be inserted into email messages or other electronic forms of communication.
+   3. Passwords shall be remembered and not written down and stored by your keyboard or workstation.
+   4. Passwords shall be treated as sensitive, confidential, and not shared with anyone including assistants or support. This includes tech support, management, or outside contractors. If problematic, refer to this document and direct the request to the Information Security Officer.
+   5. Password strength testing may be performed on a periodic or random basis by the Information Security department or its delegates to test the integrity of passwords to ensure compliance to the information security policy.
+   6. System and user-level passwords shall conform to the Standards listed below and are recommended to align with the Guidelines in Section 8.0. 
+
+
+5. Procedure
+   1. Reset a User’s password in Active Directory (AD) Before resetting the Active Directory user password, you need to log on a domain controller with administrator rights, then follow these steps:
+      1. Click Start, click Control Panel, double-click Administrative Tools, and then double-click Active Directory Users and Computers.
+      2. Navigate to the Users item of your Active Directory domain in the left pane.
+      3. Right-click the domain user account you want to reset the password for in the right pane and select Reset Password
+      4. Type a new password into the Password and Confirm Password boxes.
+      5. Click OK. Done!
+
+
+6. Password Standards
+The general password reset standards include:
+   2. User-level passwords shall be at least 7 alphanumeric characters long, contain both upper and lower characters and at least one digit (e.g. Password5 or Pa1sswd).
+   3. User-level passwords (e.g. email, web, and workstation) shall be changed at least every 90 days and cannot be reused for 3 periods.
+   4. User accounts that have system-level privileges granted through group memberships or through programs such as “sudo” must have a unique password from all other accounts held by that user
+   5. System or service-level passwords shall be at least 15 alphanumeric characters long, contain both upper and lower characters and both digits and special characters (e.g. P@$$w0rdc#ang3! or adm!n3d3lm@nU$3r).
+   6. System or service-level passwords (e.g. administrative, service accounts, named accounts) shall be changed at least once every 180 days.
+   7. System or service-level accounts shall be locked out for a minimum of 5 minutes after 5 invalid password attempts.
+   8. Where SNMP is used, the community strings must be defined as something other than the standard defaults of “public”, “private”, and “system” and must be different from the passwords used to log in interactively. A keyed hash must be used where available (e.g. SNMP v2). If this community string is to be used outside of a managed services provider, it must not be a globally used internal string.
+
+
+7. Guidelines
+   1. Choose a strong password each time you select a new password. Strong passwords have the following characteristics.
+      1. Contain both upper and lower characters (e.g., a-z, A-Z)
+      2. Have digits and special characters as well as letters (e.g., 0-9,!@#$%^&*)
+   2. Change any assigned temporary passwords the first time you log in.
+   3. Choose a seemingly random set of characters for your password. A trick for doing this is to choose the first letter of a song title, favorite book, or simple sentence. For example, "Joe's secret password for June." may become "j's$p4J."
+   4. Logoff and/or "lock" your computer or application each time you walk away from your immediate work area.
+   5. Use different passwords for your user account at and your personal accounts.
+   6. Change your password(s) if you suspect there is a possibility your password has been compromised.
+   7. Do not write your password down on a piece of paper or store it electronically unencrypted on any computer.
+   8. Do not use a word contained in any dictionary (English or non-English).
+   9. Do not use any variation of your username or any other personal data (birthdates, pet's name, street address, license plate number, Social Security number, etc.).
+   10. Do not check the "Save Password" checkbox in any application (e.g. MS Outlook). This is especially important for laptop users that connect remotely. 
+   11. Do not reveal a password in email, questionnaires, or security forms.
+   12. Do not speak about a password in front of others or in a large group.
+   13. Do not hint at the format of a password. (e.g. “my family name”)
+   14. Do not use any of the password examples highlighted within this document.
+   15. If someone demands a password, refer them to this document and direct them to the Information Security Team. 
+
+
+8. Exceptions to the Policy
+Exceptions to the guiding principles in this policy must be documented and formally approved by the Chief Information Officer. Policy exceptions must describe:
+   1. The nature of the exception
+   2. A reasonable explanation for why the policy exception is required
+   3. Any risks created by the policy exception
+   4. Evidence of approval by the IT Director/ Reporting Manager.
+   
+   
